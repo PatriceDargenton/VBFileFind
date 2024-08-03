@@ -1,0 +1,3 @@
+﻿Ce mot ne pas être trouvé, car le è est encodé sur 2 octets ici (UTF-8 avec nomenclature : Byte Order Marks) :
+Pièces
+Pieces

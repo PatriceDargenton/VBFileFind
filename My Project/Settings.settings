@@ -1,0 +1,111 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="frm_EtatFenetre" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="CheminRecherche" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C:\</Value>
+    </Setting>
+    <Setting Name="bInclureSousDossiers" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Filtre" Type="System.String" Scope="User">
+      <Value Profile="(Default)">*.*</Value>
+    </Setting>
+    <Setting Name="bDateMin" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="bDateMax" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DateMin" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DateMax" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="bContient" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MotARechercher" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="bCasse" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="TypeEncodage" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="bOuvrirBlocNotes" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="frmPosition" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">10, 10</Value>
+    </Setting>
+    <Setting Name="frmTaille" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">790, 590</Value>
+    </Setting>
+    <Setting Name="FiltreExclusion" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="RaccourciBlocNotesRechercherCtrl_f" Type="System.String" Scope="User">
+      <Value Profile="(Default)">^(f)</Value>
+    </Setting>
+    <Setting Name="RaccourciBlocNotesSensibleCasseAlt_c" Type="System.String" Scope="User">
+      <Value Profile="(Default)">%(c)</Value>
+    </Setting>
+    <Setting Name="RaccourciBlocNotesOccurrSuivAlt_S" Type="System.String" Scope="User">
+      <Value Profile="(Default)">%(S)</Value>
+    </Setting>
+    <Setting Name="RaccourciBlocNotesOccurrSuivAnglaisAlt_F" Type="System.String" Scope="User">
+      <Value Profile="(Default)">%(F)</Value>
+    </Setting>
+    <Setting Name="ExeBlocNotes" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Notepad.exe</Value>
+    </Setting>
+    <Setting Name="DelaiMSec1OuvertureBlocNotes" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+    <Setting Name="bBackgroundWorker" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="bLogBilan" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="bSignalerChaqueFichierBarreEtat" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DelaiAffichageBarreMsgSec" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.01</Value>
+    </Setting>
+    <Setting Name="DelaiAffichageListeFichiersSec" Type="System.Single" Scope="User">
+      <Value Profile="(Default)">0.25</Value>
+    </Setting>
+    <Setting Name="TailleColChemin" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">350</Value>
+    </Setting>
+    <Setting Name="TailleColTailleTxt" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="TailleColDate" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">120</Value>
+    </Setting>
+    <Setting Name="TailleColDateAcces" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">120</Value>
+    </Setting>
+    <Setting Name="bTailleMin" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="bTailleMax" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="TailleMin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="TailleMax" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1000000</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
