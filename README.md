@@ -8,7 +8,7 @@ Recherche de fichiers pour remplacer celle de Windows
 - [Versions](#versions)
 
 ## Utilisation
-Ajouter le menu contextuel via le bouton +, quitter VBFileFind, puis lancer une recherche via l'explorateur de fichier de Windows, en sélectionnant un dossier avec le bouton droit de la souris, puis en cliquant sur "Rechercher avec VBFileFind" (avec Windows 11, il faudra appuyer sur la touche majuscule pour afficher directement ce menu, sinon il faudra d'abord afficher le menu Autres options).
+Lancer VBFileFind en mode administrateur, ajouter le menu contextuel via le bouton +, quitter VBFileFind, puis lancer une recherche via l'explorateur de fichier de Windows, en sélectionnant un dossier avec le bouton droit de la souris, puis en cliquant sur "Rechercher avec VBFileFind" (avec Windows 11, il faudra appuyer sur la touche majuscule pour afficher directement ce menu, sinon il faudra d'abord afficher le menu Autres options).
 
 ## Limitations
 - Windows 11 : la recherche d'un mot dans le bloc-notes ne peut plus être pilotée via les envois de touche : désactivé
