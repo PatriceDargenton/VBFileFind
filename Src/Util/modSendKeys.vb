@@ -53,7 +53,7 @@ Module modSendKeys
             '  mais sans recherche de l'occurrence trouvée (ne pas ouvrir l'appli. associée)
             'OuvrirAppliAssociee(sChemin)
             Dim cheminNotepad$ = IO.Path.Combine(
-            Environment.GetFolderPath(Environment.SpecialFolder.Windows),
+                Environment.GetFolderPath(Environment.SpecialFolder.Windows),
                 "System32", "notepad.exe")
             Process.Start(cheminNotepad, sChemin)
             Exit Sub
