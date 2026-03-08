@@ -2,6 +2,9 @@
 
 Toutes les modifications notables apportées au projet VBFileFind sont documentées dans ce fichier.
 
+## [1.10] - 2026-03-08
+- Windows 11 : on peut encore ouvrir les fichiers via le bloc-notes, mais sans recherche de l'occurrence trouvée (ne pas ouvrir l'appli. associée)
+
 ## [1.09] - 2024-08-03
 ### Ajouté
 - Windows 11 : la recherche d'un mot dans le bloc-notes ne peut plus être piloté via les envois de touche : désactivé

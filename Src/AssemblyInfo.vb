@@ -9,7 +9,7 @@ Imports System.Runtime.InteropServices
     "https://www.codeproject.com/Articles/35044/File-Searcher-in-C")>
 <Assembly: AssemblyCompany("")>
 <Assembly: AssemblyProduct("VBFileFind")>
-<Assembly: AssemblyCopyright("Copyright © 2024")>
+<Assembly: AssemblyCopyright("Copyright © 2026")>
 <Assembly: AssemblyTrademark("")>
 
-<Assembly: AssemblyVersion("1.0.9.*")>
+<Assembly: AssemblyVersion("1.1.0.*")>

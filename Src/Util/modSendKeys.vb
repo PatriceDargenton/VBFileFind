@@ -49,7 +49,13 @@ Module modSendKeys
         End If
 
         If bOuvrirSeulement Then
-            OuvrirAppliAssociee(sChemin)
+            ' 08/03/2026 Windows 11 : on peut encore ouvrir via le bloc-notes,
+            '  mais sans recherche de l'occurrence trouvée (ne pas ouvrir l'appli. associée)
+            'OuvrirAppliAssociee(sChemin)
+            Dim cheminNotepad$ = IO.Path.Combine(
+            Environment.GetFolderPath(Environment.SpecialFolder.Windows),
+                "System32", "notepad.exe")
+            Process.Start(cheminNotepad, sChemin)
             Exit Sub
         End If
 

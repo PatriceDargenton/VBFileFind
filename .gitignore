@@ -400,7 +400,7 @@ FodyWeavers.xsd
 *.bat
 VBFileFind.vbproj.html
 VBFileFind.vbproj.ini
-VBFileFind_ToDo.txt
+VBFileFind_*.txt
 *.dll
 VBFileFind.exe
 VBFileFind.exe.config

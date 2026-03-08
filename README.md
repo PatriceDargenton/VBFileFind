@@ -1,5 +1,6 @@
 # VBFileFind
 Recherche de fichiers pour remplacer celle de Windows
+---
 
 ## Table des matières
 - [Utilisation](#utilisation)
