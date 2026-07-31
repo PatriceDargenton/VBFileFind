@@ -11,7 +11,7 @@ Module modDepart
 
     Public ReadOnly sNomAppli$ = My.Application.Info.Title
     Public ReadOnly sTitreMsg$ = sNomAppli
-    Private Const sDateVersionVBFileFind$ = "08/03/2026"
+    Private Const sDateVersionVBFileFind$ = "31/07/2026"
     Public Const sDateVersionAppli$ = sDateVersionVBFileFind
 
     Public ReadOnly sVersionAppli$ =

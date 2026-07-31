@@ -578,8 +578,11 @@ Fin:
                     abTxtRechMin = Me.m_abTxtRechMin
                     abTxtRechMinUc = Me.m_abTxtRechMinUC
                 ElseIf Me.m_prm.m_iTypeEncodage = TypeEncodage.Detecter Then
-                    abTxtRech = Me.m_abTxtRechMin
-                    abTxtRechUc = Me.m_abTxtRechMinUC
+                    ' 31/07/2026 Correction des recherches insensibles à la casse pour l'option Détecter
+                    'abTxtRech = Me.m_abTxtRechMin
+                    'abTxtRechUc = Me.m_abTxtRechMinUC
+                    abTxtRechMin = Me.m_abTxtRechMin
+                    abTxtRechMinUc = Me.m_abTxtRechMinUC
                     bDetecterEncodage = True ' 27/07/2024
                 End If
             End If
@@ -784,12 +787,16 @@ Verifier:
         Dim abBloc As Byte() = Nothing
 
         Try
-            Dim encodage As Encoding
-            If bRechUc OrElse bRechMinUc Then
-                encodage = Encoding.Unicode
-            Else
-                encodage = Encoding.ASCII
-            End If
+
+            ' 31/07/2026
+            'Dim encodage As Encoding
+            'If bRechUc OrElse bRechMinUc Then
+            '    encodage = Encoding.Unicode
+            'Else
+            '    encodage = Encoding.ASCII
+            'End If
+            If bRechUc OrElse bDetecterEncodage Then abBloc = New Byte(iLongBloc) {}
+
             Using fs As New FileStream(sChemin, FileMode.Open, FileAccess.Read)
 
                 If bDetecterEncodage Then
@@ -805,9 +812,10 @@ Verifier:
                             abTxtRechUc, abTxtRechMinUc, acBloc, abBloc, bContient, bReadFileStream:=False)
                     End Using
 
-                Else
+                ElseIf bRech And Not bRechUc Then
 
-                    Using sr As New StreamReader(fs, encodage)
+                    ' 31/07/2026 Recherche ASCII uniquement
+                    Using sr As New StreamReader(fs, Encoding.ASCII)
                         RechercheOcc(
                             fs, sr,
                             iLongRech, iTailleBloc,
@@ -815,6 +823,28 @@ Verifier:
                             abTxtRech, abTxtRechMin,
                             abTxtRechUc, abTxtRechMinUc, acBloc, abBloc, bContient, bReadFileStream:=False)
                     End Using
+
+                ElseIf bRechUc And Not bRech Then
+
+                    ' 31/07/2026 Recherche Unicode uniquement
+                    Using sr As New StreamReader(fs, Encoding.Unicode)
+                        RechercheOcc(
+                            fs, sr,
+                            iLongRech, iTailleBloc,
+                            bRech, bRechUc, bRechMin, bRechMinUc,
+                            abTxtRech, abTxtRechMin,
+                            abTxtRechUc, abTxtRechMinUc, acBloc, abBloc, bContient, bReadFileStream:=False)
+                    End Using
+
+                Else
+
+                    ' 31/07/2026 Recherche avec les deux encodages (ASCII ou Unicode) : lire en octets bruts
+                    RechercheOcc(
+                        fs, Nothing,
+                        iLongRech, iTailleBloc,
+                        bRech, bRechUc, bRechMin, bRechMinUc,
+                        abTxtRech, abTxtRechMin,
+                        abTxtRechUc, abTxtRechMinUc, acBloc, abBloc, bContient, bReadFileStream:=True)
 
                 End If
             End Using
@@ -900,9 +930,17 @@ Boucle:
 
         If fs.Position >= fs.Length Then Exit Sub
 
-        For i As Integer = 0 To iLongRech - 1 - 1
-            acBloc(i) = acBloc(iTailleBloc + i)
-        Next i
+        If bReadFileStream Then
+            ' 31/07/2026 Test de l'ancienne technique : oubli
+            For i As Integer = 0 To iLongRech - 1 - 1
+                abBloc(i) = abBloc(iTailleBloc + i)
+            Next i
+        Else
+            For i As Integer = 0 To iLongRech - 1 - 1
+                acBloc(i) = acBloc(iTailleBloc + i)
+            Next i
+        End If
+
         Dim iNbOctetsLus0%
         If bReadFileStream Then
             iNbOctetsLus0 = fs.Read(abBloc, iLongRech - 1, iTailleBloc)
